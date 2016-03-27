@@ -1,4 +1,6 @@
-import org.junit.Ignore;
+package introduction;
+
+import introduction.DataTypes;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

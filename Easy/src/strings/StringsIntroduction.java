@@ -11,17 +11,22 @@ public class StringsIntroduction {
         String A = sc.nextLine();
         String B = sc.nextLine();
 
-        System.out.println(A.length() + B.length());
-        if (0 < A.compareTo(B))
-            System.out.println("Yes");
-        else
-            System.out.println("No");
+        StringsIntroduction stringsIntroduction = new StringsIntroduction();
+        System.out.print(stringsIntroduction.processStrings(A, B));
+    }
+
+    public String processStrings(String A, String B) {
         StringBuilder sb = new StringBuilder();
-        sb.append(A.substring(0,1).toUpperCase());
+        sb.append(A.length() + B.length() + "\n");
+        if (0 < A.compareTo(B))
+            sb.append("Yes\n");
+        else
+            sb.append("No\n");
+        sb.append(A.substring(0, 1).toUpperCase());
         sb.append(A.substring(1));
         sb.append(" ");
-        sb.append(B.substring(0,1).toUpperCase());
+        sb.append(B.substring(0, 1).toUpperCase());
         sb.append(B.substring(1));
-        System.out.println(sb.toString());
+        return sb.toString();
     }
 }
